@@ -1,0 +1,19 @@
+<h3> {{title}} </h3>
+	<form method = "POST" action = "/item/">
+		{{#each items}}
+		<ul>
+			{{#unless checked}}
+			<li>
+				<inputtype "checkbox" name = "itemCheck" value = "{{itemName}}" id = "{{slug}}">
+				{{quantity}} x {{itemName}}
+			</li>
+			{{#if checked}} //checks if the box is checked
+				<li> {{quantity}} x {{itemName}}
+				</li>
+			{{/if}}
+
+		</ul>
+		{{/each}}
+
+	<input type = "submit" value = "Update List">
+	</form>
